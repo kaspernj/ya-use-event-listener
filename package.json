@@ -1,6 +1,6 @@
 {
   "name": "ya-use-event-listener",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "description": "React hook for subscribing to event listeners with environment-aware cleanup",
   "main": "build/index.js",
