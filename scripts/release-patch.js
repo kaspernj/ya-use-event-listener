@@ -11,6 +11,7 @@ const {version} = JSON.parse(readFileSync(packageUrl, "utf8"))
 
 run("git add -A")
 run(`git commit -m "Release ${version}"`)
+run("git push origin master")
 
 try {
   execSync("npm whoami", {stdio: "ignore"})
