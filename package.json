@@ -3,12 +3,17 @@
   "version": "0.1.0",
   "type": "module",
   "description": "React hook for subscribing to event listeners with environment-aware cleanup",
-  "main": "src/index.js",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "exports": {
-    ".": "./src/index.js"
+    ".": {
+      "types": "./build/index.d.ts",
+      "default": "./build/index.js"
+    }
   },
   "files": [
-    "src/**"
+    "build/**",
+    "CHANGELOG.md"
   ],
   "keywords": [
     "events",
@@ -18,10 +23,23 @@
   ],
   "author": "kaspernj <kasper@diestoeckels.de> (github.com/kaspernj)",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint .",
+    "test": "jasmine",
+    "typecheck": "tsc --noEmit"
+  },
   "dependencies": {
     "env-sense": ">= 1.0.2"
   },
   "peerDependencies": {
     "react": ">=18.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.1",
+    "eslint-plugin-jsdoc": "^48.2.3",
+    "jasmine": "^5.7.0",
+    "react": "^18.3.1",
+    "typescript": "^5.8.2"
   }
 }
